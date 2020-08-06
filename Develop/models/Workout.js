@@ -2,22 +2,17 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const transactionSchema = new Schema({
-    name: {
-        type: String,
-        trim: true,
-        required: "Enter a name for transaction"
-    },
-    value: {
+const WorkoutSchema = new Schema({
+    day: Date,
+    exercises: [{
+        ref: "Exercise"
+    }],
+    totalDuration: {
         type: Number,
-        required: "Enter an amount"
-    },
-    date: {
-        type: Date,
-        default: Date.now
+        default: 0
     }
 });
 
-const Transaction = mongoose.model("Transaction", transactionSchema);
+const Workout = mongoose.model("Workout", WorkoutSchema);
 
-module.exports = Transaction;
+module.exports = Workout;
