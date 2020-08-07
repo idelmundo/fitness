@@ -6,8 +6,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "init": "^0.1.2",
+    "logger": "0.0.1",
     "mongoose": "^5.9.27",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {
