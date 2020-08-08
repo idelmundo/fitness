@@ -36,8 +36,8 @@
     "path": "^0.12.7"
   <hr>
 
-  ## Usage 
-  N/A
+  ## Heroku
+  https://shrouded-thicket-16171.herokuapp.com/?id=5f2e43446724670017d234a0
   <hr>
 
   ## License 
