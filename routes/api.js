@@ -9,9 +9,6 @@ module.exports = function (app) {
             .then(dbWorkout => {
                 res.json(dbWorkout);
             })
-            .catch(err => {
-                res.json(err);
-            });
     });
     //stats
     app.get("/api/workouts/range", (req, res) => {
@@ -20,21 +17,17 @@ module.exports = function (app) {
             .then(dbWorkout => {
                 res.json(dbWorkout);
             })
-            .catch(err => {
-                res.json(err);
-            });
+           
     });
 //Post
     app.post("/api/workouts", (req, res) => {
-    db.Workout.create({ day: Date.now() })  // today day when created
+    db.Workout.create({ day: Date.now() })  
         .then(workout => {
             res.json(workout);
-        }).catch(err => {
-            res.json(err);
-        });
+        })
 });
 
-//PUT
+//PUT 
 app.put("/api/workouts/:id", (req, res) => {
 
     db.Exercise.create(req.body)
@@ -49,8 +42,6 @@ app.put("/api/workouts/:id", (req, res) => {
         )
         .then(dbWorkout => {
             res.json(dbWorkout);
-        }).catch(err => {
-            res.json(err);
-        });
+        })
 });
 }
